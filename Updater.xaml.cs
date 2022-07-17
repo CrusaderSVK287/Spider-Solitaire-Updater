@@ -83,7 +83,7 @@ namespace SpiderSolitaireUpdater
                     if (File.Exists(file)) File.Move(file, @"backup/" + file);
                 }
                 StatusText.Text = "Extracting";
-                ZipFile.ExtractToDirectory("update.zip", Directory.GetCurrentDirectory());
+                ZipFile.ExtractToDirectory("update.zip", Directory.GetCurrentDirectory(), true);
                 File.Delete(@"update.zip");
                 Log("Extraction complete");
                 StatusText.Text = "Done";
